@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Applications | Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="news-manager">
+
+        <div class="manager-heading">
+            <p>ADMIN PANEL</p>
+            <h1>Applications</h1>
+
+          <input
+    type="text"
+    id="application-search"
+    placeholder="Search applications..."
+>
+
+            <span>View submitted admission applications</span>
+        </div>
+
+        <div class="uploaded-news">
+
+            <div class="manager-heading">
+                <p>ADMISSIONS</p>
+                <h2>Submitted Applications</h2>
+            </div>
+
+            <div id="admin-application-list">
+                <p>Loading applications...</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+</body>
+
+</html>

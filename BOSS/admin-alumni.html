@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alumni Stories | BOSS Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="alumni-admin">
+
+        <div class="page-header">
+
+            <h1>Alumni Stories Management</h1>
+
+            <p>
+                Create and manage stories from Beacon of Success School alumni.
+            </p>
+
+        </div>
+
+
+        <!-- ALUMNI FORM -->
+
+        <div class="alumni-form">
+
+            <div class="form-group">
+
+                <label for="alumni-name">
+                    Alumni Name
+                </label>
+
+                <input
+                    type="text"
+                    id="alumni-name"
+                    placeholder="Enter alumni name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="graduation-year">
+                    Graduation Year
+                </label>
+
+                <input
+                    type="text"
+                    id="graduation-year"
+                    placeholder="e.g. 2022"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="profession">
+                    Current Profession / Role
+                </label>
+
+                <input
+                    type="text"
+                    id="profession"
+                    placeholder="e.g. Software Engineer"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="story">
+                    Alumni Story
+                </label>
+
+                <textarea
+                    id="story"
+                    rows="10"
+                    placeholder="Write the alumni story here..."
+                ></textarea>
+
+            </div>
+
+
+          <div class="form-group">
+
+    <label for="alumni-image">
+        Alumni Photo
+    </label>
+
+    <input
+        type="file"
+        id="alumni-image"
+        accept="image/*"
+    >
+
+    <small>
+        Select an image from your computer.
+    </small>
+
+</div>
+
+<div id="alumni-image-preview"></div>
+
+
+            <!-- SAVE BUTTON -->
+
+            <button
+                type="button"
+                id="save-alumni"
+                class="save-btn">
+
+                Save Alumni Story
+
+            </button>
+
+
+            <!-- CANCEL EDIT -->
+
+            <button
+                type="button"
+                id="cancel-alumni-edit"
+                class="cancel-btn"
+                style="display: none;">
+
+                Cancel Edit
+
+            </button>
+
+
+            <p id="alumni-message"></p>
+
+        </div>
+
+
+        <!-- SAVED STORIES -->
+
+        <div class="saved-section">
+
+            <h2>
+                Saved Alumni Stories
+            </h2>
+
+            <div id="saved-alumni">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+</body>
+
+</html>

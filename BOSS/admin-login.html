@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="login-page">
+
+        <div class="login-box">
+
+            <div class="login-logo">
+                <img src="BOSS1.webp" alt="School Logo">
+            </div>
+
+            <p class="login-label">ADMINISTRATION</p>
+
+            <h1>Admin Login</h1>
+
+            <p class="login-text">
+                Sign in to manage Beacon of Success School.
+            </p>
+
+            <form id="admin-login-form">
+
+                <div class="input-group">
+                    <label for="admin-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="admin-email"
+                        placeholder="Enter admin email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="admin-password">Password</label>
+                    <input
+                        type="password"
+                        id="admin-password"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+                <p id="login-message"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+
+</body>
+</html>

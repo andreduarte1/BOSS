@@ -1,0 +1,155 @@
+  <!-- FORM -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>academic excellence</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+  </body>
+  </html>         
+  <div class="achievement-form-card">
+
+                <h2 id="achievement-form-title">
+                    Add Academic Achievement
+                </h2>
+
+                <form id="achievement-form">
+
+                    <div class="form-group">
+
+                        <label for="achievement-title">
+                            Achievement Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="achievement-title"
+                            placeholder="e.g. Outstanding WAEC Performance"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="achievement-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="achievement-description"
+                            rows="5"
+                            placeholder="Describe the academic achievement..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="achievement-date">
+                            Achievement Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="achievement-date"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="achievement-image">
+                            Award / Achievement Image
+                        </label>
+
+                        <input
+                            type="file"
+                            id="achievement-image"
+                            accept="image/*"
+                        >
+
+                        <small>
+                            Upload a photo of the award, certificate,
+                            trophy or achievement.
+                        </small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="admin-submit-btn"
+                        id="achievement-submit-btn"
+                    >
+                        Add Achievement
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="cancel-edit-btn"
+                        id="cancel-achievement-edit"
+                        style="display: none;"
+                    >
+                        Cancel Edit
+                    </button>
+
+
+                    <p id="achievement-message"></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- ACHIEVEMENT LIST -->
+            <div class="achievement-list-card">
+
+                <div class="achievement-list-header">
+
+                    <div>
+
+                        <p>STUDENT SUCCESS</p>
+
+                        <h2>
+                            Academic Achievements
+                        </h2>
+
+                    </div>
+
+                    <span id="achievement-count">
+                        0 Achievements
+                    </span>
+
+                </div>
+
+
+                <div id="admin-achievements-list">
+
+                    <p class="empty-achievements">
+                        Loading achievements...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    </body>
+  </html>  

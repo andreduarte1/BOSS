@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News & Events | Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+        <div class="admin-content">
+
+            <div class="admin-top">
+
+                <div>
+                    <p>ADMIN PANEL</p>
+                    <h1>News & Events</h1>
+                </div>
+
+                <button class="logout-btn" id="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div class="news-manager">
+
+                <div class="manager-heading">
+                    <p>CONTENT MANAGEMENT</p>
+                    <h2>Add News or Event</h2>
+                </div>
+
+
+                <form id="news-form">
+
+                    <div class="upload-group">
+
+                        <label for="news-title">
+                            Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="news-title"
+                            placeholder="Enter news or event title"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="upload-group">
+
+                        <label for="news-content">
+                            Content
+                        </label>
+
+                        <textarea
+                            id="news-content"
+                            placeholder="Write the news or event details..."
+                            rows="7"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="upload-group">
+
+                        <label for="news-date">
+                            Event Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="news-date"
+                        >
+
+                    </div>
+
+
+                    <div class="upload-group">
+
+                        <label for="news-image">
+                            Image (Optional)
+                        </label>
+
+                        <input
+                            type="file"
+                            id="news-image"
+                            accept="image/*"
+                        >
+
+                    </div>
+
+
+                <button
+    type="submit"
+    class="upload-btn"
+    id="news-submit-btn"
+>
+    Publish News
+</button>
+
+<button
+    type="button"
+    class="cancel-edit-btn"
+    id="cancel-edit-btn"
+    style="display: none;"
+>
+    Cancel Edit
+</button>
+
+                    <p id="news-message"></p>
+
+                </form>
+
+                <div class="uploaded-news">
+
+    <div class="manager-heading">
+        <p>NEWS CONTENT</p>
+        <h2>Published News & Events</h2>
+    </div>
+
+    <div id="admin-news-list">
+        <p>Loading news...</p>
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Curriculum | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="curriculum-hero">
+
+        <div class="curriculum-hero-content">
+
+            <p>BEACON OF SUCCESS SCHOOL</p>
+
+            <h1>Our Curriculum</h1>
+
+            <span>
+                Discover our academic programmes and
+                subject outlines for each class.
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <main class="curriculum-container">
+
+        <div class="curriculum-intro">
+
+            <h2>Academic Curriculum</h2>
+
+            <p>
+                Explore the subjects and learning outlines
+                offered at Beacon of Success School.
+            </p>
+
+        </div>
+
+
+        <!-- CLASS FILTER -->
+
+        <div class="curriculum-filter">
+
+            <label for="class-filter">
+                Select Class
+            </label>
+
+            <select id="class-filter">
+
+                <option value="all">
+                    All Classes
+                </option>
+
+                <option value="JSS 1">
+                    JSS 1
+                </option>
+
+                <option value="JSS 2">
+                    JSS 2
+                </option>
+
+                <option value="JSS 3">
+                    JSS 3
+                </option>
+
+                <option value="SS 1">
+                    SS 1
+                </option>
+
+                <option value="SS 2">
+                    SS 2
+                </option>
+
+                <option value="SS 3">
+                    SS 3
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div id="curriculum-content">
+
+            <p class="loading">
+                Loading curriculum...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Beacon of Success School.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+</body>
+
+</html>

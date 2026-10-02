@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="admin-page">
+
+        <div class="admin-sidebar">
+
+            <div class="admin-logo">
+                <img src="BOSS1.webp" alt="School Logo">
+                <h2>BOSS</h2>
+            </div>
+
+            <ul class="admin-menu">
+
+                <li class="active">
+                    <a href="#">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="admin-gallery.html">Photo Gallery</a>
+                </li>
+
+                <li>
+                    <a href="admin-news.html">News & Events</a>
+                </li>
+
+                <li>
+                    <a href="admin-calendar.html">Academic Calendar</a>
+                </li>
+
+                <li>
+                    <a href="admin-achievements.html">Academic Achievements</a>
+                </li>
+
+                <li>
+                    <a href="admin-curriculum.html">Curriculum</a>
+                </li>
+
+                <li>
+                    <a href="admin-fees.html">School Fees</a>
+                </li>
+
+                <li>
+                    <a href="admin-applications.html">Application Forms</a>
+                </li>
+
+                <li>
+                    <a href="admin-alumni.html">Alumni Stories</a>
+                </li>
+
+
+               
+
+            </ul>
+
+        </div>
+
+
+        <div class="admin-content">
+
+            <div class="admin-top">
+
+                <div>
+                    <p>ADMIN PANEL</p>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <button class="logout-btn" id="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <div class="admin-cards">
+
+                <div class="admin-card"  onclick="window.location.href='admin-gallery.html'" >
+                    <h3>Photo Gallery</h3>
+                    <p>Manage school pictures</p>
+                    <span id="gallery-count"></span>
+                </div>
+
+                <div class="admin-card" onclick="window.location.href='admin-news.html'">
+                    <h3>News & Events</h3>
+                    <p>Manage school news</p>
+                    <span id="news-count"></span>
+                </div>
+
+                <div class="admin-card" onclick="window.location.href='admin-applications.html'">
+    <h3>Applications</h3>
+    <p>View admission applications</p>
+    <span id="applications-count">0</span>
+</div>
+
+                <div class="admin-card" onclick="window.location.href='admin-achievements.html'">
+    <h3>Achievements</h3>
+    <p> academic achievements</p>
+    <span id="achievements-count">0</span>
+</div>
+
+            </div>
+
+
+            <div class="admin-welcome">
+
+                <h2>Welcome to the Admin Dashboard</h2>
+
+                <p>
+                    Manage Beacon of Success School content,
+                    gallery pictures, news, admissions and more
+                    from one place.
+                </p>
+
+            </div>
+
+
+
+        </div>
+  
+
+</div>
+
+    </section>
+          
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+
+</body>
+</html>
+

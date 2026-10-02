@@ -1,0 +1,4612 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================
+   BOSS NAV + HERO
+   ========================================== */
+
+.hero-wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.58),
+            rgba(0, 0, 0, 0.58)
+        ),
+        url("BOSS2.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.nav1 {
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6%;
+    box-sizing: border-box;
+
+    background: transparent;
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.pic1 {
+    display: flex;
+    align-items: center;
+
+    margin-right: auto;
+}
+
+.pic1 img {
+    width: 72px;
+    height: 72px;
+
+    object-fit: contain;
+}
+
+
+/* NAV LINKS */
+
+#nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MAIN LINKS */
+
+#nav-links > li {
+    position: relative;
+}
+
+#nav-links > li > a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 0;
+
+    display: block;
+
+    transition: 0.3s ease;
+}
+
+#nav-links > li > a:hover {
+    color: #f5b400;
+}
+
+
+/* ==========================================
+   DROPDOWN MENUS
+   ========================================== */
+
+.abt-dropdown,
+.academic-dropdown,
+.admissions-dropdown,
+.info-dropdown {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 220px;
+
+    background: #fff;
+
+    padding: 10px 0;
+    margin: 0;
+
+    list-style: none;
+
+    border-radius: 5px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+    display: none;
+}
+
+
+/* SHOW DROPDOWN ON DESKTOP */
+
+.abt:hover .abt-dropdown,
+.academic:hover .academic-dropdown,
+.admission-menu:hover .admissions-dropdown,
+.info:hover .info-dropdown {
+    display: block;
+}
+
+
+/* DROPDOWN LINKS */
+
+.abt-dropdown li,
+.academic-dropdown li,
+.admissions-dropdown li,
+.info-dropdown li {
+    width: 100%;
+}
+
+.abt-dropdown li a,
+.academic-dropdown li a,
+.admissions-dropdown li a,
+.info-dropdown li a {
+    display: block;
+
+    padding: 12px 18px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.abt-dropdown li a:hover,
+.academic-dropdown li a:hover,
+.admissions-dropdown li a:hover,
+.info-dropdown li a:hover {
+    background: #f5b400;
+    color: #222;
+}
+
+
+/* ==========================================
+   CONTACT BUTTON
+   ========================================== */
+
+.contact {
+    margin-left: 30px;
+
+    padding: 12px 20px;
+
+    background: #f5b400;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.contact:hover {
+    background: #fff;
+}
+
+
+/* ==========================================
+   MENU BUTTON
+   ========================================== */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    line-height: 1;
+
+    z-index: 9999;
+}
+
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+.part1 {
+    width: 100%;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background: transparent;
+}
+
+
+/* HERO CONTENT */
+
+.div1 {
+    width: 100%;
+    max-width: 800px;
+
+    margin-left: 8%;
+
+    padding: 70px 30px;
+
+    box-sizing: border-box;
+
+    color: #fff;
+}
+
+
+/* SMALL TITLE */
+
+.small-text {
+    color: #f5b400;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+/* MAIN HEADING */
+
+.div1 h1 {
+    margin: 0 0 25px;
+
+    color: #fff;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+}
+
+.div1 h1 span {
+    color: #f5b400;
+}
+
+
+/* DESCRIPTION */
+
+.div1 > p:not(.small-text) {
+    max-width: 680px;
+
+    margin-bottom: 35px;
+
+    color: #eee;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* HERO BUTTONS */
+
+.div2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.button1,
+.button2 {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.button1 {
+    background: #f5b400;
+
+    color: #222;
+}
+
+.button1:hover {
+    background: #fff;
+}
+
+.button2 {
+    background: transparent;
+
+    color: #fff;
+
+    border: 2px solid #fff;
+}
+
+.button2:hover {
+    background: #fff;
+
+    color: #222;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .hero-wrapper {
+        min-height: 100vh;
+
+        background-position: center;
+    }
+
+
+    /* NAV */
+
+    .nav1 {
+        height: 75px;
+
+        padding: 0 5%;
+    }
+
+
+    /* LOGO */
+
+    .pic1 img {
+        width: 58px;
+        height: 58px;
+    }
+
+
+    /* MENU BUTTON */
+
+    .menu-btn {
+        display: block !important;
+        margin-left: auto;
+        color: #fff;
+        font-size: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        margin-left: 12px;
+
+        padding: 10px 13px;
+
+        font-size: 11px;
+
+        order: 3;
+    }
+
+
+    /* MOBILE NAV */
+
+    #nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        padding: 10px 0;
+        margin: 0;
+
+        background: #222;
+
+        z-index: 9998;
+    }
+
+    /* WHEN ☰ IS CLICKED */
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links > li {
+        width: 100%;
+    }
+
+    #nav-links > li > a {
+        display: block;
+        padding: 15px 25px;
+        color: #fff;
+    }
+
+}
+
+
+    /* OPEN MENU */
+
+    #nav-links.active {
+        display: flex;
+    }
+
+
+    /* MOBILE MAIN LINKS */
+
+    #nav-links > li {
+        width: 100%;
+    }
+
+    #nav-links > li > a {
+        padding: 15px 25px;
+
+        color: #fff;
+
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+
+    #nav-links > li > a:hover {
+        background: #f5b400;
+
+        color: #222;
+    }
+
+
+    /* ==========================================
+       MOBILE DROPDOWNS
+       ========================================== */
+
+    .abt-dropdown,
+    .academic-dropdown,
+    .admissions-dropdown,
+    .info-dropdown {
+        position: static;
+
+        width: 100%;
+
+        min-width: 0;
+
+        background: #333;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        padding: 0;
+
+        display: none;
+    }
+
+
+    /* SHOW DROPDOWN WHEN PARENT IS ACTIVE */
+
+    .abt.active .abt-dropdown,
+    .academic.active .academic-dropdown,
+    .admission-menu.active .admissions-dropdown,
+    .info.active .info-dropdown {
+        display: block;
+    }
+
+
+    .abt-dropdown li a,
+    .academic-dropdown li a,
+    .admissions-dropdown li a,
+    .info-dropdown li a {
+        color: #ddd;
+
+        padding: 13px 40px;
+
+        font-size: 13px;
+    }
+
+    .abt-dropdown li a:hover,
+    .academic-dropdown li a:hover,
+    .admissions-dropdown li a:hover,
+    .info-dropdown li a:hover {
+        background: #f5b400;
+
+        color: #222;
+    }
+
+
+    /* HERO */
+
+    .part1 {
+        min-height: calc(100vh - 75px);
+
+        align-items: center;
+    }
+
+
+    .div1 {
+        margin-left: 0;
+
+        padding: 50px 7%;
+    }
+
+
+    .div1 h1 {
+        font-size: clamp(40px, 11vw, 60px);
+
+        line-height: 1.08;
+    }
+
+
+    .div1 > p:not(.small-text) {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .div2 {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .button1,
+    .button2 {
+        padding: 13px 20px;
+
+        font-size: 14px;
+    }
+
+
+
+/* ==========================================
+   SMALL PHONES
+   ========================================== */
+
+@media (max-width: 500px) {
+
+    .nav1 {
+        padding: 0 4%;
+    }
+
+    .pic1 img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .menu-btn {
+        font-size: 27px;
+    }
+
+    .contact {
+        padding: 9px 10px;
+
+        font-size: 10px;
+    }
+
+    .div1 {
+        padding: 40px 6%;
+    }
+
+    .small-text {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .div1 h1 {
+        font-size: 42px;
+    }
+}
+
+
+
+ /* PART 2 PART 2 PART 2 */
+.part2 {
+    width: 100%;
+    padding: 100px 6%;
+    background: #f7f8fa;
+}
+.part2 > .div2 {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.part2 > .div2 p {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+.part2 > .div2 h2 {
+    color: #222;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.part2 > .div2 h2 span {
+    color: #f5b400;
+}
+.div3 {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.div4,
+.div6,
+.div8,
+.div10 {
+    background: white;
+    padding: 35px 25px;
+    min-height: 360px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div4:hover,
+.div6:hover,
+.div8:hover,
+.div10:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+.div5,
+.div7,
+.div9,
+.div11 {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff6d9;
+    border-radius: 50%;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+.div4 p,
+.div6 p,
+.div8 p,
+.div10 p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.div4 a,
+.div6 a,
+.div8 a,
+.div10 a {
+    margin-top: auto;
+    color: #f5b400;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.div4 a:hover,
+.div6 a:hover,
+.div8 a:hover,
+.div10 a:hover {
+    color: #222;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .div3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .part2 {
+        padding: 70px 5%;
+    }
+
+    .part2 > .div2 h2 {
+        font-size: 32px;
+    }
+
+    .part2 > .div2 p {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+     .div3 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .div4,
+    .div6,
+    .div8,
+    .div10 {
+        min-height: 330px;
+    }
+
+}
+
+/* PART 3 PART 3 PART 3 */
+
+.part3 {
+    width: 100%;
+
+    padding: 65px 6%;
+
+    background: #f5b400;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    text-align: center;
+
+    gap: 30px;
+}
+
+.div12,
+.div13,
+.div14 {
+    color: white;
+
+    padding: 15px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.div14 {
+    border-right: none;
+}
+.div12 h2,
+.div13 h2,
+.div14 h2 {
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+.div12 p,
+.div13 p,
+.div14 p {
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .part3 {
+        grid-template-columns: 1fr;
+
+        padding: 50px 5%;
+
+        gap: 25px;
+    }
+     .div12,
+    .div13,
+    .div14 {
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+        padding-bottom: 25px;
+    }
+     .div14 {
+        border-bottom: none;
+
+        padding-bottom: 0;
+    }
+
+    .div12 h2,
+    .div13 h2,
+    .div14 h2 {
+        font-size: 38px;
+    }
+
+}
+
+
+/* FOOTER FOOTER FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+
+    background: #111820;
+
+    color: white;
+
+    padding-top: 70px;
+}
+
+
+/* FOOTER CONTAINER */
+
+.footer-container {
+    width: 88%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 60px;
+}
+
+
+/* FOOTER BOX */
+
+.footer-box h3 {
+    font-size: 16px;
+
+    margin-bottom: 22px;
+
+    color: #f5b400;
+
+    letter-spacing: 1px;
+}
+
+
+/* LOGO */
+
+.footer-box img {
+    width: 80px;
+
+    height: 80px;
+
+    object-fit: contain;
+
+    margin-bottom: 18px;
+}
+
+
+/* TEXT */
+
+.footer-box p {
+    color: #b9bec5;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+/* QUICK LINKS */
+
+.footer-box ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    color: #b9bec5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #f5b400;
+
+    padding-left: 5px;
+}
+
+
+/* SOCIALS */
+
+.socials {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.socials a {
+    color: #b9bec5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #f5b400;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    text-align: center;
+
+    padding: 22px 5%;
+}
+
+.footer-bottom p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-container {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 45px;
+    }
+
+    .footer-box {
+        text-align: center;
+    }
+
+    .footer-box img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .socials {
+        align-items: center;
+    }
+
+}
+
+
+
+
+/* IMAGE */
+.gallery-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 120px 6% 80px;
+    background: #f7f8fa;
+}
+
+.gallery-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.gallery-heading p:first-child {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.gallery-heading h1 {
+    color: #222;
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.gallery-heading h1 span {
+    color: #f5b400;
+}
+
+.gallery-heading p:last-child {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.gallery-filters {
+    max-width: 900px;
+    margin: 0 auto 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    border: none;
+
+    padding: 11px 20px;
+
+    background: white;
+    color: #555;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #f5b400;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #f5b400;
+    color: white;
+}
+
+.gallery-item.hide {
+    display: none;
+}
+
+
+.gallery-grid {
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 900px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .gallery-page {
+        padding: 100px 5% 60px;
+    }
+
+    .gallery-heading h1 {
+        font-size: 32px;
+    }
+
+    .gallery-heading p:last-child {
+        font-size: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+     .gallery-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+}
+
+
+
+/* ========================================
+   BOSS ADMIN DASHBOARD
+   BEACON OF SUCCESS SCHOOL
+   ======================================== */
+
+
+/* ========================================
+   1. RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ========================================
+   2. ADMIN PAGE
+   ======================================== */
+
+.admin-page {
+    display: flex;
+    min-height: 100vh;
+    background: #f5f6f8;
+}
+
+
+/* ========================================
+   3. SIDEBAR
+   ======================================== */
+
+.admin-sidebar {
+    width: 255px;
+    height: 100vh;
+    background: #222;
+    color: white;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    padding: 25px 15px;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+
+/* ========================================
+   4. ADMIN LOGO
+   ======================================== */
+
+.admin-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 5px 10px 25px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid rgba(245, 180, 0, 0.25);
+}
+
+.admin-logo img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 3px;
+}
+
+.admin-logo h2 {
+    font-size: 22px;
+    color: #f5b400;
+
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   5. ADMIN MENU
+   ======================================== */
+
+.admin-menu {
+    list-style: none;
+}
+
+.admin-menu li {
+    margin-bottom: 5px;
+}
+
+.admin-menu li a {
+    display: block;
+
+    padding: 13px 15px;
+
+    color: #e5e5e5;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.admin-menu li a:hover {
+    background: #f5b400;
+    color: #222;
+
+    padding-left: 20px;
+}
+
+
+/* ACTIVE MENU */
+
+.admin-menu li.active a {
+    background: #f5b400;
+    color: #222;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   6. MAIN CONTENT
+   ======================================== */
+
+.admin-content {
+    width: calc(100% - 255px);
+
+    margin-left: 255px;
+
+    padding: 35px;
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   7. TOP SECTION
+   ======================================== */
+
+.admin-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+/* SMALL TITLE */
+
+.admin-top p {
+    color: #777;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+
+/* MAIN TITLE */
+
+.admin-top h1 {
+    color: #222;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   8. LOGOUT BUTTON
+   ======================================== */
+
+.logout-btn {
+    border: none;
+
+    background: #f5b400;
+
+    color: #222;
+
+    padding: 12px 24px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #222;
+
+    color: #f5b400;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   9. DASHBOARD CARDS
+   ======================================== */
+
+.admin-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* CARD */
+
+.admin-card {
+    background: white;
+
+    border: 1px solid #e1e3e7;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    min-height: 165px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+
+/* GOLD LINE */
+
+.admin-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #f5b400;
+}
+
+
+/* CARD HOVER */
+
+.admin-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #f5b400;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CARD TITLE */
+
+.admin-card h3 {
+    color: #222;
+
+    font-size: 18px;
+
+    margin-top: 5px;
+
+    margin-bottom: 10px;
+}
+
+
+/* CARD DESCRIPTION */
+
+.admin-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* CARD COUNT */
+
+.admin-card span {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-top: 18px;
+
+    background: #f5b400;
+
+    color: #222;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   10. WELCOME SECTION
+   ======================================== */
+
+.admin-welcome {
+    background: white;
+
+    border: 1px solid #e1e3e7;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* GOLD SIDE LINE */
+
+.admin-welcome::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: #f5b400;
+}
+
+
+/* WELCOME TITLE */
+
+.admin-welcome h2 {
+    color: #222;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+
+/* WELCOME TEXT */
+
+.admin-welcome p {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 750px;
+}
+
+
+/* ========================================
+   11. SIDEBAR SCROLLBAR
+   ======================================== */
+
+.admin-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+    background: #f5b400;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   12. TABLET
+   ======================================== */
+
+@media (max-width: 1100px) {
+
+    .admin-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   13. SMALL TABLET
+   ======================================== */
+
+@media (max-width: 850px) {
+
+    .admin-sidebar {
+        width: 220px;
+    }
+
+    .admin-content {
+        width: calc(100% - 220px);
+
+        margin-left: 220px;
+
+        padding: 25px;
+    }
+
+    .admin-top h1 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* ========================================
+   14. MOBILE
+   ======================================== */
+
+@media (max-width: 650px) {
+
+    .admin-page {
+        display: block;
+    }
+
+
+    /* SIDEBAR */
+
+    .admin-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+        padding: 15px;
+    }
+
+
+    /* LOGO */
+
+    .admin-logo {
+        justify-content: center;
+
+        padding-bottom: 15px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .admin-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .admin-logo h2 {
+        font-size: 20px;
+    }
+
+
+    /* MENU */
+
+    .admin-menu {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+
+    .admin-menu li {
+        margin-bottom: 0;
+    }
+
+
+    .admin-menu li a {
+        text-align: center;
+
+        font-size: 12px;
+
+        padding: 11px 5px;
+    }
+
+
+    .admin-menu li a:hover {
+        padding-left: 5px;
+    }
+
+
+    /* CONTENT */
+
+    .admin-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 25px 15px;
+    }
+
+
+    /* TOP */
+
+    .admin-top {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .admin-top p {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .admin-top h1 {
+        font-size: 25px;
+    }
+
+
+    /* LOGOUT */
+
+    .logout-btn {
+        padding: 10px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* CARDS */
+
+    .admin-cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .admin-card {
+        min-height: 145px;
+
+        padding: 22px;
+    }
+
+
+    /* WELCOME */
+
+    .admin-welcome {
+        padding: 28px 22px;
+    }
+
+
+    .admin-welcome h2 {
+        font-size: 20px;
+    }
+
+
+    .admin-welcome p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* ========================================
+   15. VERY SMALL PHONES
+   ======================================== */
+
+@media (max-width: 400px) {
+
+    .admin-menu {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-top {
+        flex-direction: column;
+    }
+
+    .logout-btn {
+        align-self: flex-start;
+    }
+
+}
+
+
+/* ============================= */
+/* ADMIN LOGIN */
+/* ============================= */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6f8;
+    padding: 30px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.login-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.login-label {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 20px 0 8px;
+}
+
+.login-box h1 {
+    color: #222;
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.login-text {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #f5b400;
+}
+
+.login-btn {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    background: #f5b400;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #222;
+}
+
+#login-message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* ============================= */
+/* GALLERY MANAGER */
+/* ============================= */
+
+.gallery-manager {
+    background: white;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.manager-heading p {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
+}
+
+.manager-heading h2 {
+    color: #222;
+    margin: 0 0 30px;
+    font-size: 25px;
+}
+
+.upload-group {
+    margin-bottom: 20px;
+}
+
+.upload-group label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.upload-group input,
+.upload-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+
+.upload-group input:focus,
+.upload-group select:focus {
+    border-color: #f5b400;
+}
+
+.upload-btn {
+    border: none;
+    background: #f5b400;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload-btn:hover {
+    background: #222;
+}
+
+#upload-message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* ============================= */
+/* ADMIN UPLOADED GALLERY */
+/* ============================= */
+
+.uploaded-gallery {
+    background: white;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.admin-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.admin-gallery-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.admin-gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.admin-gallery-info {
+    padding: 15px;
+}
+
+.admin-gallery-info h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.admin-gallery-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+@media (max-width: 800px) {
+    .admin-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .admin-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================= */
+/* ADMIN NEWS LIST */
+/* ============================= */
+
+.uploaded-news {
+    background: white;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.admin-news-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-news-item h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.admin-news-item .news-date {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.admin-news-item .news-content {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.admin-news-item img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* NEWS ACTION BUTTONS */
+/* ============================= */
+
+.news-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-news-btn,
+.delete-news-btn {
+    border: none;
+    padding: 9px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-news-btn {
+    background: #222;
+    color: white;
+}
+
+.delete-news-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.edit-news-btn:hover,
+.delete-news-btn:hover {
+    opacity: 0.8;
+}
+
+.news-page {
+    padding: 80px 8%;
+    background: #f8f9fc;
+    min-height: 100vh;
+}
+
+.news-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news-heading p {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.news-heading h1 {
+    font-size: 42px;
+    margin: 0 0 12px;
+}
+
+.news-heading span {
+    font-size: 16px;
+    color: #666;
+}
+
+.public-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.public-news-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.public-news-card:hover {
+    transform: translateY(-6px);
+}
+
+.public-news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.public-news-info {
+    padding: 25px;
+}
+
+.public-news-info h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.public-news-date {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.public-news-content {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+    .public-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .news-page {
+        padding: 60px 5%;
+    }
+
+    .news-heading h1 {
+        font-size: 32px;
+    }
+
+    .public-news-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+.news-manager {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.news-manager form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.news-manager .upload-group {
+    margin-bottom: 25px;
+}
+
+.news-manager input,
+.news-manager textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.uploaded-news {
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .news-manager {
+        width: 94%;
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .news-manager form {
+        padding: 20px;
+    }
+}
+
+
+/* ==============================
+   APPLICATION FORM
+============================== */
+
+.application-page {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.application-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.application-heading p {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.application-heading h1 {
+    font-size: 42px;
+    margin: 0 0 12px;
+}
+
+.application-heading span {
+    font-size: 16px;
+    color: #666;
+}
+
+#application-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+#application-form h2 {
+    font-size: 24px;
+    margin: 10px 0 25px;
+}
+
+.application-group {
+    margin-bottom: 25px;
+}
+
+.application-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.application-group input,
+.application-group select,
+.application-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.application-group input:focus,
+.application-group select:focus,
+.application-group textarea:focus {
+    border-color: #1e3a8a;
+}
+
+.application-group textarea {
+    resize: vertical;
+}
+
+.application-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.application-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #1e3a8a;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.application-submit:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.application-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#application-message {
+    text-align: center;
+    margin-top: 18px;
+    font-weight: 600;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .application-page {
+        width: 94%;
+        padding: 20px 0;
+        margin: 35px auto;
+    }
+
+    .application-heading h1 {
+        font-size: 32px;
+    }
+
+    #application-form {
+        padding: 25px 20px;
+    }
+
+    .application-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    #application-form h2 {
+        font-size: 21px;
+    }
+}
+
+.application-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+#application-form h2 {
+    position: relative;
+    padding-bottom: 12px;
+    margin-top: 35px;
+}
+
+#application-form h2:first-child {
+    margin-top: 0;
+}
+
+#application-form h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #1e3a8a;
+}
+.application-page {
+    background: #f8f9fc;
+    border-radius: 20px;
+}
+
+#application-form {
+    border: 1px solid #eee;
+}
+.application-group input,
+.application-group select,
+.application-group textarea {
+    background: #fafafa;
+}
+
+.application-group input:hover,
+.application-group select:hover,
+.application-group textarea:hover {
+    border-color: #bbb;
+}
+
+.application-group input::placeholder,
+.application-group textarea::placeholder {
+    color: #999;
+}
+
+.application-group input:focus,
+.application-group select:focus,
+.application-group textarea:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.08);
+}
+.application-submit {
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+.application-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(30, 58, 138, 0.2);
+}
+
+.application-submit:active {
+    transform: translateY(0);
+}
+#application-message {
+    min-height: 22px;
+    padding: 10px;
+    border-radius: 6px;
+    line-height: 1.5;
+}
+@media (max-width: 500px) {
+
+    .application-page {
+        width: 96%;
+        margin: 20px auto;
+        padding: 15px 0;
+    }
+
+    .application-heading {
+        margin-bottom: 30px;
+    }
+
+    .application-heading h1 {
+        font-size: 28px;
+    }
+
+    .application-heading span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .application-logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    #application-form {
+        padding: 22px 16px;
+        border-radius: 14px;
+    }
+
+    #application-form h2 {
+        font-size: 20px;
+    }
+
+    .application-group {
+        margin-bottom: 20px;
+    }
+
+    .application-group input,
+    .application-group select,
+    .application-group textarea {
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    .application-submit {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+.application-note {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0 0 15px;
+}
+.required-note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+/* ==============================
+   ADMIN APPLICATIONS
+============================== */
+
+#admin-application-list {
+    display: grid;
+    gap: 25px;
+}
+
+#admin-application-list .admin-news-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+}
+
+#admin-application-list .admin-news-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#admin-application-list .admin-news-item p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+#admin-application-list .admin-news-item hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+#admin-application-list .news-actions {
+    margin-top: 25px;
+}
+
+.delete-application-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.application-status {
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 10px;
+}
+
+.application-status:focus {
+    outline: none;
+    border-color: #1e3a8a;
+}
+
+@media (max-width: 600px) {
+
+    .application-status {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #admin-application-list .news-actions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .delete-application-btn {
+        width: 100%;
+    }
+}
+
+.application-status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px !important;
+    font-weight: 700;
+    margin-bottom: 15px !important;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404 !important;
+}
+
+.status-accepted {
+    background: #d4edda;
+    color: #155724 !important;
+}
+
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24 !important;
+}
+
+/* ==========================================
+   ACADEMIC CALENDAR
+========================================== */
+
+.calendar-form-card,
+.calendar-list-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-form-card h2,
+.calendar-list-card h2 {
+    color: #222;
+    margin-bottom: 25px;
+}
+
+
+/* FORM */
+
+.calendar-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.calendar-form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+}
+
+.calendar-form-card input,
+.calendar-form-card textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.calendar-form-card input:focus,
+.calendar-form-card textarea:focus {
+    border-color: #f5b400;
+}
+
+.calendar-form-card textarea {
+    resize: vertical;
+}
+
+
+/* BUTTONS */
+
+.admin-submit-btn {
+    background: #f5b400;
+    color: #222;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-submit-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.cancel-edit-btn {
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+
+/* MESSAGE */
+
+#calendar-message {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* CALENDAR HEADER */
+
+.calendar-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-list-header p {
+    color: #f5b400;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.calendar-list-header h2 {
+    margin: 0;
+}
+
+#calendar-count {
+    background: #f5b400;
+    color: #222;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* EVENT */
+
+.calendar-event {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-left: 5px solid #f5b400;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.calendar-event:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* DATE BOX */
+
+.calendar-event-date {
+    min-width: 70px;
+    height: 70px;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-event-date strong {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.calendar-event-date span {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+/* EVENT INFORMATION */
+
+.calendar-event-info {
+    flex: 1;
+}
+
+.calendar-event-info h3 {
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.calendar-event-info p {
+    color: #666;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.calendar-event-info .calendar-full-date {
+    color: #f5b400;
+    font-weight: 600;
+}
+
+
+/* ACTION BUTTONS */
+
+.calendar-event-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-calendar-btn,
+.delete-calendar-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-calendar-btn {
+    background: #f5b400;
+    color: #222;
+}
+
+.delete-calendar-btn {
+    background: #222;
+    color: #fff;
+}
+
+.edit-calendar-btn:hover {
+    opacity: 0.85;
+}
+
+.delete-calendar-btn:hover {
+    background: #f5b400;
+    color: #222;
+}
+
+
+/* EMPTY STATE */
+
+.empty-calendar {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .calendar-form-card,
+    .calendar-list-card {
+        padding: 20px;
+    }
+
+    .calendar-list-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .calendar-event {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .calendar-event-date {
+        width: 70px;
+    }
+
+    .calendar-event-actions {
+        width: 100%;
+    }
+
+    .edit-calendar-btn,
+    .delete-calendar-btn {
+        flex: 1;
+    }
+
+    .cancel-edit-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+}
+
+
+/* ==========================================
+   PUBLIC ACADEMIC CALENDAR
+========================================== */
+
+.calendar-hero {
+    min-height: 380px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("BOSS2.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.calendar-hero-content {
+    color: #fff;
+    max-width: 800px;
+}
+
+.calendar-hero-content p {
+    color: #f5b400;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.calendar-hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.calendar-hero-content span {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* CALENDAR SECTION */
+
+.public-calendar-section {
+    background: #f5f6f8;
+    padding: 80px 7%;
+}
+
+.calendar-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.calendar-heading p {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.calendar-heading h2 {
+    color: #222;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.calendar-heading span {
+    color: #666;
+    line-height: 1.7;
+}
+
+.heading-line {
+    width: 60px;
+    height: 4px;
+    background: #f5b400;
+    margin: 0 auto 20px;
+}
+
+
+/* CALENDAR EVENTS */
+
+#public-calendar {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.public-calendar-event {
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #f5b400;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.public-calendar-event:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* DATE */
+
+.public-calendar-date {
+    min-width: 90px;
+    height: 90px;
+
+    background: #222;
+    color: #fff;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.public-calendar-date strong {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.public-calendar-date span {
+    color: #f5b400;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    margin-top: 7px;
+}
+
+
+/* EVENT CONTENT */
+
+.public-calendar-event h3 {
+    color: #222;
+    font-size: 21px;
+    margin-bottom: 7px;
+}
+
+.public-calendar-event p {
+    color: #666;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+.public-calendar-event p:first-of-type {
+    color: #f5b400;
+    font-weight: 600;
+}
+
+
+/* LOADING */
+
+.calendar-loading {
+    text-align: center;
+    color: #666;
+    padding: 40px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .calendar-hero {
+        min-height: 300px;
+    }
+
+    .calendar-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .calendar-hero-content span {
+        font-size: 15px;
+    }
+
+    .public-calendar-section {
+        padding: 60px 20px;
+    }
+
+    .calendar-heading h2 {
+        font-size: 30px;
+    }
+
+    .public-calendar-event {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .public-calendar-date {
+        min-width: 75px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .public-calendar-date strong {
+        font-size: 27px;
+    }
+
+}
+
+/* ==========================================
+   ACADEMIC ACHIEVEMENTS ADMIN
+========================================== */
+
+.achievement-form-card,
+.achievement-list-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.achievement-form-card h2,
+.achievement-list-card h2 {
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.achievement-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.achievement-form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+}
+
+.achievement-form-card input,
+.achievement-form-card textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.achievement-form-card input:focus,
+.achievement-form-card textarea:focus {
+    border-color: #f5b400;
+}
+
+.achievement-form-card textarea {
+    resize: vertical;
+}
+
+.achievement-form-card small {
+    display: block;
+    margin-top: 7px;
+    color: #777;
+    font-size: 13px;
+}
+
+.achievement-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.achievement-list-header p {
+    color: #f5b400;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.achievement-list-header h2 {
+    margin: 0;
+}
+
+#achievement-count {
+    background: #f5b400;
+    color: #222;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.admin-achievement {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-left: 5px solid #f5b400;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.admin-achievement:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-date {
+    min-width: 75px;
+    height: 75px;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-date strong {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.achievement-date span {
+    color: #f5b400;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.achievement-info {
+    flex: 1;
+}
+
+.achievement-info h3 {
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.achievement-info p {
+    color: #666;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.achievement-info .achievement-full-date {
+    color: #f5b400;
+    font-weight: 600;
+}
+
+.admin-achievement-image {
+    display: block;
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 12px;
+    border: 1px solid #eee;
+}
+
+.achievement-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-achievement-btn,
+.delete-achievement-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-achievement-btn {
+    background: #f5b400;
+    color: #222;
+}
+
+.delete-achievement-btn {
+    background: #222;
+    color: #fff;
+}
+
+.edit-achievement-btn:hover {
+    opacity: 0.85;
+}
+
+.delete-achievement-btn:hover {
+    background: #f5b400;
+    color: #222;
+}
+
+.empty-achievements {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+@media (max-width: 700px) {
+
+    .achievement-form-card,
+    .achievement-list-card {
+        padding: 20px;
+    }
+
+    .achievement-list-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .admin-achievement {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-achievement-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .achievement-actions {
+        width: 100%;
+    }
+
+    .edit-achievement-btn,
+    .delete-achievement-btn {
+        flex: 1;
+    }
+
+}
+
+/* ==========================================
+   PUBLIC ACADEMIC ACHIEVEMENTS
+========================================== */
+
+.public-achievements-section {
+    padding: 90px 8%;
+    background: #f7f7f7;
+    min-height: 70vh;
+}
+
+.achievements-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.achievements-heading p {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.achievements-heading h1 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.achievements-heading span {
+    display: block;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.heading-line {
+    width: 60px;
+    height: 4px;
+    background: #f5b400;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+
+/* ACHIEVEMENT GRID */
+
+#public-achievements {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.public-achievement-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.public-achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* IMAGE */
+
+.public-achievement-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.public-achievement-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.public-achievement-card:hover
+.public-achievement-image img {
+    transform: scale(1.04);
+}
+
+
+/* CONTENT */
+
+.public-achievement-content {
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* DATE */
+
+.public-achievement-date {
+    min-width: 65px;
+    height: 65px;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.public-achievement-date strong {
+    font-size: 23px;
+    line-height: 1;
+}
+
+.public-achievement-date span {
+    color: #f5b400;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+/* TEXT */
+
+.public-achievement-text {
+    flex: 1;
+}
+
+.public-achievement-text h2 {
+    color: #222;
+    font-size: 21px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.public-achievement-text p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.public-achievement-full-date {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* LOADING / EMPTY */
+
+.achievements-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .public-achievements-section {
+        padding: 70px 5%;
+    }
+
+    .achievements-heading h1 {
+        font-size: 32px;
+    }
+
+    #public-achievements {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .public-achievement-content {
+        padding: 20px;
+        gap: 12px;
+    }
+
+    .public-achievement-image {
+        height: 220px;
+    }
+
+    .public-achievement-date {
+        min-width: 55px;
+        height: 55px;
+    }
+
+    .public-achievement-date strong {
+        font-size: 20px;
+    }
+
+    .public-achievement-text h2 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   SCHOOL FEES ADMIN
+========================================== */
+
+.fees-form-card,
+.fees-list-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.fees-form-card h2,
+.fees-list-card h2 {
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.fees-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.fees-form-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+}
+
+.fees-form-card input,
+.fees-form-card textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.fees-form-card input:focus,
+.fees-form-card textarea:focus {
+    border-color: #f5b400;
+}
+
+.fees-form-card textarea {
+    resize: vertical;
+}
+
+.fees-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.fees-list-header p {
+    color: #f5b400;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.fees-list-header h2 {
+    margin: 0;
+}
+
+#fee-count {
+    background: #f5b400;
+    color: #222;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* FEE ITEM */
+
+.admin-fee-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 22px;
+    border: 1px solid #eee;
+    border-left: 5px solid #f5b400;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.admin-fee-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* CLASS */
+
+.fee-class {
+    min-width: 180px;
+    flex: 1;
+}
+
+.fee-class h3 {
+    color: #222;
+    margin-bottom: 7px;
+}
+
+.fee-class p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* FEE DETAILS */
+
+.fee-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.fee-details > div {
+    min-width: 90px;
+}
+
+.fee-details span {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.fee-details strong {
+    color: #222;
+    font-size: 15px;
+}
+
+.fee-details .fee-total {
+    border-left: 1px solid #ddd;
+    padding-left: 20px;
+}
+
+.fee-total strong {
+    color: #f5b400;
+}
+
+
+/* ACTIONS */
+
+.fee-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-fee-btn,
+.delete-fee-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-fee-btn {
+    background: #f5b400;
+    color: #222;
+}
+
+.delete-fee-btn {
+    background: #222;
+    color: #fff;
+}
+
+.edit-fee-btn:hover {
+    opacity: 0.85;
+}
+
+.delete-fee-btn:hover {
+    background: #f5b400;
+    color: #222;
+}
+
+
+/* EMPTY */
+
+.empty-fees {
+    text-align: center;
+    padding: 40px;
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .admin-fee-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .fee-class {
+        width: 100%;
+    }
+
+    .fee-details {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .fee-actions {
+        width: 100%;
+    }
+
+    .edit-fee-btn,
+    .delete-fee-btn {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .fees-form-card,
+    .fees-list-card {
+        padding: 20px;
+    }
+
+    .fees-list-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .fee-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .fee-details .fee-total {
+        border-left: none;
+        padding-left: 0;
+    }
+
+}
+
+/* ==========================================
+   PUBLIC SCHOOL FEES
+========================================== */
+
+.public-fees-section {
+    padding: 90px 8%;
+    background: #f7f7f7;
+    min-height: 70vh;
+}
+
+.fees-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.fees-heading p {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.fees-heading h1 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.fees-heading span {
+    display: block;
+    color: #666;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+#public-fees {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.public-fee-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    border-top: 4px solid #f5b400;
+}
+
+.public-fee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.public-fee-header h2 {
+    color: #222;
+    font-size: 24px;
+}
+
+.public-fee-header span {
+    background: #222;
+    color: #f5b400;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.public-fee-details {
+    display: grid;
+    gap: 12px;
+}
+
+.public-fee-details > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.public-fee-details span {
+    color: #666;
+}
+
+.public-fee-details strong {
+    color: #222;
+}
+
+.public-fee-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 16px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.public-fee-total span {
+    color: #222;
+    font-weight: 700;
+}
+
+.public-fee-total strong {
+    color: #f5b400;
+    font-size: 20px;
+}
+
+.public-fee-description {
+    color: #666;
+    line-height: 1.6;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.fees-note {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #222;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.fees-note h3 {
+    color: #f5b400;
+    margin-bottom: 8px;
+}
+
+.fees-note p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.fees-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .public-fees-section {
+        padding: 70px 5%;
+    }
+
+    .fees-heading h1 {
+        font-size: 32px;
+    }
+
+    #public-fees {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .public-fee-card {
+        padding: 20px;
+    }
+
+    .public-fee-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .public-fee-header h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* ==========================================
+   ADMIN CURRICULUM
+========================================== */
+
+.curriculum-admin {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+}
+
+.curriculum-settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.term label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.term textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.subject-box {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.subject-box h2 {
+    margin-bottom: 20px;
+}
+
+.terms {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.term textarea {
+    min-height: 220px;
+    resize: vertical;
+}
+
+.save-btn {
+    border: none;
+    padding: 14px 25px;
+    background: #f5b400;
+    color: #222;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#curriculum-message {
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.saved-section {
+    margin-top: 60px;
+}
+
+.saved-curriculum-card {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.saved-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.delete-btn {
+    border: none;
+    padding: 10px 15px;
+    background: #d62828;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saved-subject {
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.saved-subject details {
+    margin-top: 10px;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+.saved-subject summary {
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.saved-subject p {
+    padding: 0 15px 15px;
+    white-space: pre-line;
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .curriculum-admin {
+        padding: 20px 15px;
+    }
+
+    .curriculum-settings {
+        grid-template-columns: 1fr;
+    }
+
+    .terms {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+/* ==========================================
+   PUBLIC CURRICULUM
+========================================== */
+
+.curriculum-hero {
+    min-height: 380px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("BOSS2.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #fff;
+}
+
+.curriculum-hero-content p {
+    color: #f5b400;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.curriculum-hero-content h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.curriculum-hero-content span {
+    font-size: 17px;
+}
+
+
+.curriculum-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.curriculum-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.curriculum-intro h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+
+/* FILTER */
+
+.curriculum-filter {
+    max-width: 350px;
+    margin: 0 auto 50px;
+}
+
+.curriculum-filter label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.curriculum-filter select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+/* CLASS */
+
+.curriculum-class {
+    margin-bottom: 60px;
+}
+
+.class-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 25px;
+
+    margin-bottom: 25px;
+
+    background: #222;
+    color: #fff;
+
+    border-radius: 8px;
+}
+
+.class-heading span {
+    color: #f5b400;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.class-heading h2 {
+    margin: 7px 0 0;
+    font-size: 30px;
+}
+
+.class-heading p {
+    color: #f5b400;
+    font-weight: 700;
+}
+
+
+/* SUBJECTS */
+
+.subjects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.subject-card {
+    background: #fff;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0,0,0,0.08);
+}
+
+.subject-card h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+
+/* TERMS */
+
+.subject-card details {
+    margin-top: 10px;
+
+    border:
+        1px solid #e5e5e5;
+
+    border-radius: 6px;
+}
+
+.subject-card summary {
+    padding: 14px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.outline {
+    padding: 15px;
+
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* MESSAGES */
+
+.loading,
+.error-message,
+.empty-message {
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #222;
+    color: #fff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .curriculum-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+
+/* ==========================================
+   ALUMNI STORIES
+========================================== */
+
+.alumni-page {
+    padding: 80px 7%;
+    background: #f7f9fc;
+    min-height: 100vh;
+}
+
+.alumni-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.alumni-heading span {
+    color: #d4a017;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.alumni-heading h1 {
+    font-size: 42px;
+    margin: 10px 0;
+    color: #123b2a;
+}
+
+.alumni-heading p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.alumni-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.alumni-card:hover {
+    transform: translateY(-5px);
+}
+
+.alumni-photo {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.alumni-content {
+    padding: 25px;
+}
+
+.alumni-content h2 {
+    margin: 0 0 8px;
+    color: #123b2a;
+}
+
+.alumni-year {
+    color: #d4a017;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.alumni-profession {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.alumni-story {
+    color: #666;
+    line-height: 1.7;
+}
+
+.no-alumni,
+.alumni-error {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .alumni-page {
+        padding: 60px 5%;
+    }
+
+    .alumni-heading h1 {
+        font-size: 32px;
+    }
+
+    .alumni-photo {
+        height: 240px;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Calendar | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+        <!-- MAIN CONTENT -->
+        <div class="admin-content">
+
+            <div class="admin-top">
+
+                <div>
+                    <p>ADMIN PANEL</p>
+                    <h1>Academic Calendar</h1>
+                </div>
+
+                <button class="logout-btn" id="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+
+            <!-- ADD EVENT -->
+            <div class="calendar-form-card">
+
+                <h2 id="calendar-form-title">
+                    Add Academic Event
+                </h2>
+
+                <form id="calendar-form">
+
+                    <div class="form-group">
+
+                        <label for="calendar-title">
+                            Event Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="calendar-title"
+                            placeholder="e.g. Resumption Day"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="calendar-description">
+                            Description
+                        </label>
+
+                        <textarea
+                            id="calendar-description"
+                            placeholder="Enter event description"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="calendar-date">
+                            Event Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="calendar-date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="submit" class="admin-submit-btn" id="calendar-submit-btn">
+                        Add Event
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-edit-btn"
+                        id="cancel-calendar-edit"
+                        style="display: none;"
+                    >
+                        Cancel Edit
+                    </button>
+
+                    <p id="calendar-message"></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- EVENTS -->
+            <div class="calendar-list-card">
+
+                <div class="calendar-list-header">
+
+                    <div>
+                        <p>ACADEMIC EVENTS</p>
+                        <h2>School Calendar</h2>
+                    </div>
+
+                    <span id="calendar-count">
+                        0 Events
+                    </span>
+
+                </div>
+
+
+                <div id="admin-calendar-list">
+
+                    <p class="empty-calendar">
+                        Loading calendar events...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SUPABASE -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photo Gallery | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="gallery-page">
+
+        <div class="gallery-heading">
+            <p>OUR GALLERY</p>
+
+            <h1>
+                School <span>Moments</span>
+            </h1>
+
+            <p>
+                Explore memorable moments and activities
+                from Beacon of Success School.
+            </p>
+        </div>
+
+        <div class="gallery-filters">
+
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="events">School Events</button>
+    <button class="filter-btn" data-filter="students">Students</button>
+    <button class="filter-btn" data-filter="sports">Sports</button>
+    <button class="filter-btn" data-filter="classroom">Classroom</button>
+
+</div>
+
+
+        <div class="gallery-grid" id="gallery-grid">
+
+        </div>
+
+    </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+
+<script>
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        const galleryItems =
+            document.querySelectorAll(".gallery-item");
+
+        galleryItems.forEach(item => {
+
+            if (
+                filter === "all" ||
+                item.dataset.category === filter
+            ) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>

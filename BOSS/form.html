@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Application Form | Beacon of Success School</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="application-page">
+
+        <p class="required-note">
+    Fields marked with * are required.
+</p>
+
+        <div class="application-heading">
+
+              <img
+        src="BOSS1.webp"
+        alt="Beacon of Success School Logo"
+        class="application-logo"
+    >
+
+
+            <p>ADMISSIONS</p>
+            <h1>Application Form</h1>
+            <span>Apply to Beacon of Success School</span>
+        </div>
+
+
+        <form id="application-form">
+
+            <h2>Student Information</h2>
+
+            <div class="application-group">
+                <label for="student-name">Student Full Name *</label>
+                <input
+                    type="text"
+                    id="student-name"
+                    placeholder="Enter student's full name"
+                    required
+                >
+            </div>
+
+            <div class="application-row">
+
+                <div class="application-group">
+                    <label for="date-of-birth">Date of Birth</label>
+                    <input
+                        type="date"
+                        id="date-of-birth"
+                    >
+                </div>
+
+                <div class="application-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="">Select gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="application-group">
+                <label for="class-applied">Class Applying For *</label>
+
+                <select id="class-applied" required>
+
+                    <option value="">
+                        Select class
+                    </option>
+
+                    <option value="Creche">
+                        Creche
+                    </option>
+
+                    <option value="Nursery">
+                        Nursery
+                    </option>
+
+                    <option value="Primary 1">
+                        Primary 1
+                    </option>
+
+                    <option value="Primary 2">
+                        Primary 2
+                    </option>
+
+                    <option value="Primary 3">
+                        Primary 3
+                    </option>
+
+                    <option value="Primary 4">
+                        Primary 4
+                    </option>
+
+                    <option value="Primary 5">
+                        Primary 5
+                    </option>
+
+                    <option value="Primary 6">
+                        Primary 6
+                    </option>
+
+                    <option value="JSS 1">
+                        JSS 1
+                    </option>
+
+                    <option value="JSS 2">
+                        JSS 2
+                    </option>
+
+                    <option value="JSS 3">
+                        JSS 3
+                    </option>
+
+                    <option value="SSS 1">
+                        SSS 1
+                    </option>
+
+                    <option value="SSS 2">
+                        SSS 2
+                    </option>
+
+                    <option value="SSS 3">
+                        SSS 3
+                    </option>
+
+                </select>
+            </div>
+
+
+            <h2>Parent / Guardian Information</h2>
+
+            <div class="application-group">
+                <label for="parent-name">Parent / Guardian Name *</label>
+
+                <input
+                    type="text"
+                    id="parent-name"
+                    placeholder="Enter parent or guardian name"
+                    required
+                >
+            </div>
+
+
+            <div class="application-row">
+
+                <div class="application-group">
+
+                    <label for="parent-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="parent-email"
+                        placeholder="Enter email address"
+                    >
+
+                </div>
+
+
+                <div class="application-group">
+
+                    <label for="parent-phone">
+                        Phone Number *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="parent-phone"
+                        placeholder="Enter phone number"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="application-group">
+
+                <label for="address">
+                    Home Address
+                </label>
+
+                <textarea
+                    id="address"
+                    rows="3"
+                    placeholder="Enter home address"
+                ></textarea>
+
+            </div>
+
+
+            <div class="application-group">
+
+                <label for="previous-school">
+                    Previous School
+                </label>
+
+                <input
+                    type="text"
+                    id="previous-school"
+                    placeholder="Enter previous school"
+                >
+
+            </div>
+
+
+            <div class="application-group">
+
+                <label for="message">
+                    Additional Information
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Any additional information..."
+                ></textarea>
+
+            </div>
+
+            <p class="application-note">
+    Please make sure the information provided is accurate before submitting.
+</p>
+
+            <button
+                type="submit"
+                class="application-submit"
+                id="application-submit"
+            >
+                Submit Application
+            </button>
+
+            <p id="application-message"></p>
+
+        </form>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+</body>
+
+</html>
